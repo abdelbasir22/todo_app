@@ -22,7 +22,7 @@ class AddTasks extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 30,
-              color: AppColors.indigo,
+              color: AppColors.secondaryColor,
               fontWeight: FontWeight.bold,
             ),
           ),

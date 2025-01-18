@@ -42,7 +42,7 @@ class HomeView extends StatelessWidget {
           );
         },
         shape: CircleBorder(),
-        backgroundColor: AppColors.indigo,
+        backgroundColor: AppColors.secondaryColor,
         child: Icon(
           Icons.add,
           size: 40,

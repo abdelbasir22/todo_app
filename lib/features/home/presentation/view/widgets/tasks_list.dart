@@ -25,6 +25,7 @@ class TasksList extends StatelessWidget {
               },
               onLongePress: () {
                 taskData.deleteTask(taskData.tasks[index]);
+                Navigator.pop(context);
               },
             );
           },

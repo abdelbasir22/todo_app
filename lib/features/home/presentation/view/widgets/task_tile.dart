@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_app/features/home/presentation/view/widgets/custom_alert_dialog.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 
@@ -25,12 +26,29 @@ class TaskTile extends StatelessWidget {
           decoration: isChecked ? TextDecoration.lineThrough : null,
         ),
       ),
-      trailing: Checkbox(
-        activeColor: AppColors.primaryColor,
-        value: isChecked,
-        onChanged: chechboxChange,
+      trailing: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Checkbox(
+            activeColor: AppColors.primaryColor,
+            value: isChecked,
+            onChanged: chechboxChange,
+          ),
+          IconButton(
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) =>
+                    CustomAlertDialog(onLongePress: onLongePress),
+              );
+            },
+            icon: Icon(
+              Icons.delete,
+              color: AppColors.red,
+            ),
+          ),
+        ],
       ),
-      onLongPress: onLongePress,
     );
   }
 }
